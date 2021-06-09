@@ -1,0 +1,99 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* card-grid-area */
+
+.card_header{
+    background-color:white;
+    padding: 15px 0 0 15px;
+    border-top-left-radius: 5px;
+    grid-area:h;
+}
+.card_header h2{
+    font-size:x-large;
+}
+.card_header p{
+    font-size:medium;
+    color: lightgray;
+}
+.card_photo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border-top-right-radius: 5px;
+    padding:10px;
+    grid-area:p;
+}
+.card_photo img{
+    height:60px;
+    width: 80%;
+}
+.card_message{
+    background-color: white;
+    padding:10px;
+    grid-area:m;
+}
+.card_container_buttons_flex{
+    grid-area:b;
+    border-top: lightgray solid 1px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.card_container_buttons_flex button{
+    background-color: white;
+    font-weight:700;
+    height:80%;
+    width:45%;
+}
+.card_container_buttons_flex :first-child{
+    color: rgb(9, 218, 9); 
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-top: solid rgb(9, 218, 9) 1px;
+    border-bottom: solid rgb(9, 218, 9) 1px;
+    border-left: solid rgb(9, 218, 9) 1px;
+    border-right:none
+}
+.card_container_buttons_flex :last-child{
+    color: red;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border:solid red 1px
+}
+/* grid  */
+.grid_card{
+    height:250px;
+    display: grid;
+    grid-template-columns:repeat(12,1fr);
+    grid-template-rows: repeat(3,1fr);
+    grid-template-areas:
+    " h h h h h h h h h p p p "
+    " m m m m m m m m m m m m "
+    " b b b b b b b b b b b b "
+    ;
+    margin: 10px;
+    border: lightgray solid 1px;
+    border-radius: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* total page */
+/* .grid_page div:nth-child(1n){
+    background-color: lightpink;
+}
+.grid_page div:nth-child(2n){
+    background-color:lightskyblue;
+} */
+.grid_page{
+    display: grid;
+    height: 100%;
+    grid-template-columns:1fr 1fr 1fr;
+    grid-template-rows:auto;
+}
